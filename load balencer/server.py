@@ -13,7 +13,6 @@ def start_backend_server(host, port):
         # Simulating request processing
         client_socket.sendall(b"HTTP/1.1 200 OK\r\n\r\nRequest Processed\n")
         client_socket.close()
-
 # Run the backend server on a different thread for testing
 if __name__ == "__main__":
     start_backend_server('localhost', 8081)  # Example backend server running on port 8081

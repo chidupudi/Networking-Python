@@ -11,7 +11,6 @@ def get_network_ip():
     # Calculate CIDR (e.g., 192.168.0.1/24)
     cidr = sum([bin(int(x)).count('1') for x in netmask.split('.')])
     return f"{ip}/{cidr}"
-
 def scan_network(ip_range):
     """Scan the network for active devices."""
     arp = ARP(pdst=ip_range)

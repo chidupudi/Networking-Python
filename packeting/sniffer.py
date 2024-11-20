@@ -13,7 +13,6 @@ def packet_handler(packet):
         src_ip = packet[IP].src
         dst_ip = packet[IP].dst
         protocol = packet[IP].proto
-        
         # Update the protocol counter
         packet_counts[protocol] += 1
         

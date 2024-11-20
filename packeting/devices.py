@@ -24,6 +24,7 @@ def scan_network(ip_range):
     
     return devices
 
+
 def packet_callback(packet):
     """Process captured packets to extract DNS queries and application data."""
     if packet.haslayer(DNS) and packet.getlayer(DNS).qr == 0:  # DNS query

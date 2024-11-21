@@ -30,7 +30,7 @@ class LoadBalancer:
         server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         server.bind((host, port))
         server.listen(5)
-        
+
 
         print(f"Load balancer started at {host}:{port}")
         while True:
@@ -38,7 +38,6 @@ class LoadBalancer:
             print("Request received by Load Balancer")
             self.forward_request(client_socket)
             client_socket.close()
-
 # Run the Load Balancer
 if __name__ == "__main__":
     backend_servers = [('localhost', 8081), ('localhost', 8082)]  # Add backend servers

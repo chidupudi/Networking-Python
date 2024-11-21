@@ -33,7 +33,6 @@ def packet_callback(packet):
         src = packet[IP].src
         dst = packet[IP].dst
         print(f"Traffic: {src} -> {dst} ({len(packet)} bytes)")
-
 def monitor_traffic():
     """Start sniffing network traffic."""
     print("Starting traffic monitor...")

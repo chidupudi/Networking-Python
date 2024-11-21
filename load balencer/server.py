@@ -8,6 +8,7 @@ def start_backend_server(host, port):
     print(f"Backend server started at {host}:{port}")
     
     while True:
+        
         client_socket, _ = server.accept()
         print(f"Request received by backend server {host}:{port}")
         # Simulating request processing

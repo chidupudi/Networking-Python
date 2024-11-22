@@ -37,7 +37,6 @@ def monitor_traffic():
     """Start sniffing network traffic."""
     print("Starting traffic monitor...")
     sniff(prn=packet_callback, store=False)  # Sniff packets without storing them in memory
-
 if __name__ == "__main__":
     print("Scanning network...")
     ip_range = get_network_ip()

@@ -46,7 +46,6 @@ if __name__ == "__main__":
     print("Connected Devices:")
     for device in devices:
           print(f"IP: {device['ip']}, MAC: {device['mac']}")
-
     print("\nStarting to monitor traffic. Press Ctrl+C to stop...")
     try:
         monitor_traffic()

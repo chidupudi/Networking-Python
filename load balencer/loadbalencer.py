@@ -31,7 +31,6 @@ class LoadBalancer:
         server.bind((host, port))
         server.listen(5)
 
-
         print(f"Load balancer started at {host}:{port}")
         while True:
             client_socket, _ = server.accept()

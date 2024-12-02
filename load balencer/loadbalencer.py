@@ -1,6 +1,5 @@
 import socket
 import time
-
 # Load Balancer code
 class LoadBalancer:
     def __init__(self, backend_servers):

@@ -3,7 +3,9 @@ import time
 # Load Balancer code
 class LoadBalancer:
     def __init__(self, backend_servers):
+        
         self.backend_servers = backend_servers
+
         self.index = 0  # Round-robin index
 
     def get_next_backend(self):
@@ -28,7 +30,7 @@ class LoadBalancer:
     def start(self, host, port):
         server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         server.bind((host, port))
-        
+
         server.listen(5)
 
         print(f"Load balancer started at {host}:{port}")

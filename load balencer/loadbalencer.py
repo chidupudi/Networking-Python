@@ -28,6 +28,7 @@ class LoadBalancer:
     def start(self, host, port):
         server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         server.bind((host, port))
+        
         server.listen(5)
 
         print(f"Load balancer started at {host}:{port}")

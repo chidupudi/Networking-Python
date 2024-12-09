@@ -10,6 +10,7 @@ class LoadBalancer:
 
     def get_next_backend(self):
         backend = self.backend_servers[self.index]
+        
         self.index = (self.index + 1) % len(self.backend_servers)
         return backend
 

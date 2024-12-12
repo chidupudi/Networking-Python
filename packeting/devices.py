@@ -41,7 +41,6 @@ if __name__ == "__main__":
     print("Scanning network...")
     ip_range = get_network_ip()
     devices = scan_network(ip_range)
-    
     print("Connected Devices:")
     for device in devices:
           print(f"IP: {device['ip']}, MAC: {device['mac']}")

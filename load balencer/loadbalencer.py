@@ -3,14 +3,11 @@ import time
 # Load Balancer code
 class LoadBalancer:
     def __init__(self, backend_servers):
-        
         self.backend_servers = backend_servers
-
         self.index = 0  # Round-robin index
 
     def get_next_backend(self):
         backend = self.backend_servers[self.index]
-        
         self.index = (self.index + 1) % len(self.backend_servers)
         return backend
 
@@ -22,7 +19,6 @@ class LoadBalancer:
         backend_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         backend_socket.connect((backend_host, backend_port))
         backend_socket.sendall(b"GET / HTTP/1.1\r\n")
-        
         response = backend_socket.recv(1024)
         client_socket.sendall(response)
         

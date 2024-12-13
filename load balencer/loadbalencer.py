@@ -6,6 +6,7 @@ class LoadBalancer:
         self.backend_servers = backend_servers
         self.index = 0  # Round-robin index
 
+
     def get_next_backend(self):
         backend = self.backend_servers[self.index]
         self.index = (self.index + 1) % len(self.backend_servers)

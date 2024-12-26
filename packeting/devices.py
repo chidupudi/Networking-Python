@@ -8,6 +8,7 @@ def get_network_ip():
     ip = iface_info["addr"]
     netmask = iface_info["netmask"]
 
+
     # Calculate CIDR (e.g., 192.168.0.1/24)
     cidr = sum([bin(int(x)).count('1') for x in netmask.split('.')])
     return f"{ip}/{cidr}"
